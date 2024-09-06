@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist Places Finder</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+
+    <h1>Busca lugares cercanos</h1>
+
+    <div class="container">
+        <select id="place-type">
+            <option value="all">Todo</option>
+            <option value="restaurant">Restaurantes</option>
+            <option value="hotel">Hoteles</option>
+            <option value="tourism">Lugares turisticos</option>
+        </select>
+        
+        <button onclick="getCurrentLocation()">Buscar</button>
+    </div>
+
+    <div id="map"></div>
+
+    <h2 id="subtitle"></h2> 
+
+    <ul id="places-list"></ul>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script type="module" src="../static/js/main.js"></script>
+</body>
+</html>

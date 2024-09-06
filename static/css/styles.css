@@ -1,0 +1,84 @@
+body {
+    background-color: #fdf6e3;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    margin-top: 200px;
+    color: #333333;
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+select {
+    width: 350px;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+button {
+    background-color: #5cb85c;
+    width: 250px;
+    color: white;
+    font-size: 20px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+#places-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px auto 20px auto;
+    width: 100%;
+    max-width: 500px;
+}
+
+#places-list li {
+    background-color: #f7f0ea;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333333;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, background-color 0.3s;
+    cursor: pointer;
+}
+
+#places-list li:hover {
+    background-color: #e0dcd5;
+    transform: translateY(-2px);
+}
+
+#subtitle {
+    margin-top: 450px;
+}
+
+#map {
+    position: absolute;
+    height: 350px;
+    width: 600px;
+    margin-top: 400px;
+}
