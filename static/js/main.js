@@ -2,7 +2,7 @@ window.getCurrentLocation = function() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition, showError);
     } else {
-        alert("Geolocation is not supported by this browser.");
+        alert("Este navegador no admite la geolocalización.");
     }
 };
 
@@ -66,16 +66,16 @@ function showPosition(position) {
 function showError(error) {
     switch(error.code) {
         case error.PERMISSION_DENIED:
-            alert("User denied the request for Geolocation.");
+            alert("El usuario denegó la solicitud de geolocalización.");
             break;
         case error.POSITION_UNAVAILABLE:
             alert("Location information is unavailable.");
             break;
         case error.TIMEOUT:
-            alert("The request to get user location timed out.");
+            alert("La información de ubicación no está disponible.");
             break;
         case error.UNKNOWN_ERROR:
-            alert("An unknown error occurred.");
+            alert("Se produjo un error desconocido.");
             break;
     }
 }

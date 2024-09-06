@@ -23,12 +23,12 @@ def get_nearby_places():
         search_radius = 1000 
     elif place_type == 'hotel':
         place_filter = '[tourism=hotel]'
-        search_radius = 1000 
+        search_radius = 2000 
     elif place_type == 'tourism':
         place_filter = '[tourism~"attraction|museum|viewpoint"]'
         search_radius = 5000
     else:
-        # Si se seleccionan todos, combinamos los filtros de manera separada
+        
         query_part = """
         node[amenity=restaurant](around:200,{latitude},{longitude});
         node[tourism=hotel](around:1000,{latitude},{longitude});
@@ -72,7 +72,7 @@ def get_nearby_places():
                 'longitude': element['lon'],
                 'vicinity': f"{tags.get('addr:street', 'No Street')}, {tags.get('addr:city', 'No City')}"
             })
-    print(results)
+    #print(results)
     return jsonify(results)
 
 @app.route('/get_location', methods=['POST'])
@@ -82,4 +82,5 @@ def get_location():
     return jsonify({'latitude': location.latitude, 'longitude': location.longitude})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
+
